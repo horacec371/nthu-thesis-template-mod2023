@@ -18,4 +18,5 @@
 
 
 ## 說明
-請參考原作者所提供之 [wiki](https://github.com/tzhuan/ntu-thesis/wiki) 文件。
+請參考原作者所提供之 [README](https://github.com/HW-Lee/nthu-thesis-template/blob/master/README.md) 文件。
+以及原原作者所提供之 [wiki](https://github.com/tzhuan/ntu-thesis/wiki) 文件。

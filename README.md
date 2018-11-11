@@ -1,4 +1,4 @@
-# 國立清華大學碩博士論文 XeLaTeX 模板
+# 國立清華大學碩博士論文 XeLaTeX 模板魔改版
 
 ## 前言
 本模板魔改了 [Hao-Wei Lee](https://github.com/HW-Lee/) 修改的 [國立清華大學碩博士論文 XeLaTeX 模板](https://github.com/HW-Lee/nthu-thesis-template)。

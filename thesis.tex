@@ -18,11 +18,13 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 
+\usepackage{emptypage}
+
 % declare the path(s) where your graphic files are
 \graphicspath{{./figsrc/}}
 % and their extensions so you won't have to specify these with
 % every instance of \includegraphics
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+% \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 
 % Using the tex-text mapping for ligatures etc.
 \defaultfontfeatures{Mapping=tex-text}
@@ -31,16 +33,17 @@
 
 % English font
 % Note: please refer to 'fc-list :outline -f "%{family}\n"' for choosing a valid font name
-\setmainfont{Times New Roman}
+\usepackage{fontspec}
+\setmainfont{Times New Roman.ttf}
+% \setmainfont{Times New Roman}
 
 % Chinese font
 % Note: please refer to 'fc-list :outline -f "%{family}\n"' for choosing a valid font name
-\setCJKmainfont[AutoFakeBold=3,AutoFakeSlant=.4]{Kaiti TC}
+\setCJKmainfont[AutoFakeBold=3,AutoFakeSlant=.4]{kaiu.ttf}
 \defaultCJKfontfeatures{AutoFakeBold=6,AutoFakeSlant=.4}
 
-\ifdefined\withwatermark
-  \CenterWallPaper{0.5}{watermark.pdf}
-\fi
+\CenterWallPaper{0.25}{nthulogo.png}
+
 
 % Your information goes here
 \input{nthuvars}
@@ -50,9 +53,10 @@
 \frontmatter
 
 \makecover
-\makecopyright
+% \makecopyright
 
 \input{acknowledgements}
+
 \input{abstract}
 
 {\singlespacing
@@ -79,7 +83,7 @@
 
 % Your bibliography goes here
 {\singlespacing
-\bibliography{thesis}
+ \bibliography{thesis}
 }
 
 \end{document}

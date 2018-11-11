@@ -28,7 +28,7 @@
 \LoadClass[a4paper,12pt]{book}
 
 % Required packages
-\RequirePackage[top=1in,left=1.5in,bottom=1in,right=1in]{geometry}
+\RequirePackage[top=1in,left=1in,bottom=1in,right=1in]{geometry}
 \RequirePackage{xeCJK}
 \RequirePackage{setspace}
 
@@ -50,27 +50,31 @@
 \abstractname{Abstract}{摘要}
 \acknowledgements{Acknowledgements}{誌謝}
 
+\newcommand{\wideunderline}[2][2em]{%
+  \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{#2}}%
+}
+
 % The command \makecover has been re-designed to be a valid format for the Dept. EE
 \DeclareRobustCommand{\makecover}{
   \begin{titlepage}
     \begin{center}
-      \fontsize{30}{30}\selectfont
-      \makebox[9cm][s]{\textbf{\@universityzh}}\\
+      \fontsize{24}{24}\selectfont
+        \vspace{\fill}
+      \makebox[10cm][s]{\textbf{\@universityzh}}\\
       \underline{\makebox[5cm][s]{\textbf{\@typezh\@classzh}}}
     \end{center}
     \vspace{\fill}
     \begin{center}
-      \fontsize{25}{25}\selectfont
+      \fontsize{20}{20}\selectfont
       \textbf{\@titlezh}\par
       \textbf{\@titleen}\par
     \end{center}
     \vspace{\fill}
     \begin{flushleft}
       \fontsize{20}{30}\selectfont
-      \textbf{系所別：\underline{{\@institutezh\@typezh}班}
-      \hspace{\fill}組別：\underline{\@divisionzh 組}}\\
-      \textbf{學號姓名：\underline{\@studentid \@authorzh} (\@authoren)}\\
-      \textbf{指導教授：\underline{\@advisorzh\hspace{.3cm}博士} (Prof. \@advisoren)}
+      \textbf{系所別：\wideunderline[18em]{\@institutezh}}\\
+      \textbf{學號姓名：\wideunderline[17em]{\@studentid \@authorzh \@authoren}}\\
+      \textbf{指導教授：\wideunderline[17em]{\@advisorzh\hspace{.3cm}\@advisoren 博士}}
     \end{flushleft}
     \vspace{1.5cm}
     \begin{center}
@@ -165,7 +169,8 @@
   {\if@openright\cleardoublepage\else\clearpage\fi
    \chapter*{\centerline{#1}}
    \addcontentsline{toc}{chapter}{#1}
-   \quotation}
+   \quotation
+  }
   {\endquotation}
 
 \newenvironment{abstracten}{\begin{quotationpage}{\@abstractnameen}}{\end{quotationpage}}

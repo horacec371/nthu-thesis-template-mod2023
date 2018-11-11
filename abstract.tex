@@ -1,4 +1,5 @@
 \begin{abstractzh}
+\setcounter{page}{1}
 在音樂應用上，人們發明樂譜原先是為了方便以圖像的方式紀錄一段音樂的資訊，
 而光學音樂辨識旨在設計一套演算流程，讓電腦也能夠自動辨識原先是設計給人閱讀的樂譜。
 一般而言，樂譜被存為電子檔的格式大多為圖片檔，因此光學音樂辨識的目的在於從一張圖片上取得其音樂資訊。
@@ -12,22 +13,26 @@
 第二點則是其演算法基於分治法的概念，意即其分割出來的子問題幾乎是完全獨立的，也因此讓此實作更適合平行處理來加快運算速度。
 \end{abstractzh}
 
+
 \begin{abstracten}
+\setcounter{page}{2}
 The purpose of optical music recognition is to develop a computer program that is able to understand the musical score, which is invented for human beings to annotate melody. A score is usually stored as an image. Therefore, a recognition system must retrieve musical information from a set of pixels.
 This dissertation deals with two major issues: preprocessing and recognition. Preprocessing aims at dividing the input image into several slices that can be processed independently and handling the defects in the printing step. The goal of preprocessing is to simplify the subsequent recognition stage. Afterward, recognition on a staff image is the core of this dissertation. The implementation is based on template matching and the support vector machine. For real score images, the present algorithm works well.
 The design of the present algorithm brings a different perspective to optical music recognition. First, the preprocessing uses \emph{random sample consensus} (RANSAC) as a part of staff detection. Such randomness makes it meaningful to repeat the same operation; by comparing the results between different iterations, consensus-based correction provides possibility of finding symbols that other existing stable algorithms cannot find. Secondly, the algorithm is based on the \emph{divide and conquer} concept, which means the subtasks have little correlation, and hence the algorithm can be readily parallelized.
 \end{abstracten}
 
+
+
 % \keywords{Optical Music Recognition, Pattern Recognition, Music Technology}
 
-\begin{comment}
-\category{I2.10}{Computing Methodologies}{Artificial Intelligence --
-Vision and Scene Understanding} \category{H5.3}{Information
-Systems}{Information Interfaces and Presentation (HCI) -- Web-based
-Interaction.}
+% \begin{comment}
+% \category{I2.10}{Computing Methodologies}{Artificial Intelligence --
+% Vision and Scene Understanding} \category{H5.3}{Information
+% Systems}{Information Interfaces and Presentation (HCI) -- Web-based
+% Interaction.}
 
-\terms{Design, Human factors, Performance.}
+% \terms{Design, Human factors, Performance.}
 
-\keywords{Region of interest, Visual attention model, Web-based
-games, Benchmarks.}
-\end{comment}
+% \keywords{Region of interest, Visual attention model, Web-based
+% games, Benchmarks.}
+% \end{comment}

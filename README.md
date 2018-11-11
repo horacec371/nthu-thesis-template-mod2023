@@ -16,6 +16,11 @@
 雖然我最後論文還是用了Word……但是！但是！但是！本項目的魔改過程對之後投稿用LaTeX打下了基礎。
 
 
+## 預覽
+
+[戳我看效果]https://github.com/signxer/nthu-thesis-template-mod/blob/master/nthu_thesis_template_mod.pdf
+
+有一些空白頁是因為每個章節要從奇數頁開始。
 
 ## 說明
 請參考原作者所提供之 [README](https://github.com/HW-Lee/nthu-thesis-template/blob/master/README.md) 文件。
